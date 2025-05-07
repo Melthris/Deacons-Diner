@@ -19,8 +19,6 @@ Sometimes, the hardest part of movie night isn't picking the movie—it’s choo
 Just open index.html in your browser and you're good to go.
 
 🔧 Tech Stack
-HTML
-
-CSS
-
-JavaScript
+- HTML
+- CSS
+- JavaScript
