@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deacon's Diner</title>
+<link rel="stylesheet" href="main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="content-container">
+
+    <div id="app">
+        <div id="star-container">
+          <div id="star-pattern"></div>
+          <div id="star-gradient-overlay"></div>
+        </div>
+
+    <div class="container">
+        <div class="logo"></div>
+        <div class="avatar-container">
+            <img  alt="" class="avatar">
+            <div class="speech-bubble" id="speechBubble">
+                Hey! I'm Deacon, welcome to my diner! What's on the menu? Write down your meal ideas below and I'll pick one for you.
+            </div>
+        </div>
+
+        <input type="text" id="item" placeholder="Write down a meal idea here!">
+        <div id="modal-actions">
+        <button onclick="addItem()" type="button" class="modal-action">
+            <div class="modal-action-pattern"></div>
+            <div class="modal-action-fade"></div>
+            <span class="modal-action-text inter-font">Add Meal</span>
+          </button>
+
+
+           <button onclick="generateItem()" type="button" class="modal-action">
+            <div class="modal-action-pattern"></div>
+            <div class="modal-action-fade"></div>
+            <span class="modal-action-text inter-font">Now Pick For Me!</span>
+          </button>
+        </div>
+        <ul class="mealList" id="itemList"></ul>
+        <p id="result"></p>
+    </div>
+</div>
+
+<script src="generatelist.js"></script>
+<script src="buttons.js"></script>
+</body>
+</html>

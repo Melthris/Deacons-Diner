@@ -1,0 +1,262 @@
+*{
+
+    box-sizing: border-box;
+    font-family: Chewy;
+}
+body {
+   /* background: linear-gradient(#181415, #22384a); */
+   background: url(inc/bg.png);
+    background-attachment: fixed;
+    margin:0;
+    
+
+}
+.content-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 60em;
+    margin: 2em;
+    padding: 2em;
+    background: linear-gradient(#ffe8b3, #b39357);
+    border: solid #ffe8b3 2px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 2px rgb(0 0 0 / 88%);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #82583d;
+    background: -webkit-linear-gradient(#82583d, #f5dda7);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: thin;
+    font-variant-caps: all-petite-caps;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-weight: 900;
+    text-align: center;
+    background-color: #fbe4ae;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #8b1c1c;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 3px solid #bf0606;
+
+}
+
+.mealList {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+    justify-content:center;
+    display: grid;
+    font-family: Knewave;
+
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.avatar {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: solid #ffe8b3 2px;
+  box-shadow: 0 1px 4px 1px rgb(0 0 0 / 48%);
+  background-image: url(inc/Deacon.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.speech-bubble {
+    position: relative;
+    background: #00aabb;
+    color: #fff;
+    border-radius: .4em;
+    padding: 10px;
+    width: 60%;
+    margin: 1em;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: #00aabb;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -10px;
+    margin-left: -1px;
+}
+
+/* ANIMATED BUTTONS */
+
+#modal-actions {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+    gap: 2rem;
+  }
+  
+  @media(max-width: 1024px) {
+    #modal-actions {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+  }
+  
+  .modal-action {
+    width: 16rem;
+    padding: 0.85rem;
+    position: relative;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    outline: 0.2rem solid rgb(255, 255, 255);
+    outline-offset: 0.2rem;
+    overflow: hidden;
+    }
+  
+  @media(max-width: 1024px) {
+    .modal-action {
+      width: 100%;
+      max-width: 400px;
+    } 
+  }
+  
+  .modal-action:is(:hover, :focus-visible) {  
+    background-color: #b32727;
+    
+  }
+  
+  .modal-action:is(:hover, :focus-visible) .modal-action-fade,
+  .modal-action:is(:hover, :focus-visible) .modal-action-pattern {  
+    display: block; 
+    
+  }
+  
+  
+  .modal-action:is(:hover, :focus-visible) .modal-action-text-letter {
+    animation: bounce infinite;
+  }
+  
+  .modal-action-fade,
+  .modal-action-pattern {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  
+  .modal-action-fade {  
+    z-index: 1;
+    background: linear-gradient(to left, #8b1c1c, transparent 60%);
+  }
+  
+  .modal-action-pattern {
+    background-image: radial-gradient(
+      rgba(250, 232, 68, 0.6) 30%, 
+      transparent 30%
+    );
+    background-position: 0% 0%;
+    background-size: 10px 10px;
+    animation: move-background 50s linear infinite;
+    transform: skew(-15deg, 0deg);
+  }
+  
+  .modal-action-text {
+    position: relative;
+    z-index: 2; 
+    color: rgb(255, 255, 255);
+    font-size: 1.25rem;
+  }
+  
+  .modal-action-text-letter {
+    display: inline-flex;
+    position: relative;
+  }
+  
+  @keyframes move-background {
+    0% {
+      background-position: 0% 0%;
+    }
+    
+    100% {
+      background-position: -100% 0%;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 100% {
+      translate: 0% 0%;
+    }
+    
+    10% {
+      translate: 0% -12%;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 3%, 100% {
+      scale: 1 1;
+    }
+    
+    1.5% {
+      scale: 1 0;
+    }
+  }
+  .logo {
+    background-image: url(inc/DeaconsDiner.png);
+    height: 14em;
+    width: 18em;
+    position: relative;
+    top: -8em;
+    left: 19em;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.chewy-regular {
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
